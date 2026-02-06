@@ -32,6 +32,9 @@ export const Signup = () => {
 
 
     return (
+        <div className="container mt-5">
+
+
         <form onSubmit={handleSignup}>
             <div className="mb-3">
                 <label htmlFor="email" className="form-label">Email</label>
@@ -53,7 +56,8 @@ export const Signup = () => {
                     onChange={handleChange} />
 
             </div>
-            <button type="submit">Register</button>
+            <button type = "submit" className="btn btn-primary w-100" >Register</button>
         </form>
+        </div>
     )
 }
