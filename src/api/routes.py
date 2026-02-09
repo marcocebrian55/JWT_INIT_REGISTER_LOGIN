@@ -38,7 +38,7 @@ def register():
     if existing_user :
         return jsonify ({"error": "user with this mail already exist"}),400
     
-    new_user = User(email= email,is_active=True)
+    new_user = User(email= email)
     new_user.set_password(password)
 
     db.session.add(new_user)
