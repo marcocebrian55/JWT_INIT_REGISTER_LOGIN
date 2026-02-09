@@ -33,9 +33,9 @@ def register():
         return jsonify({"error": "email and password are required"}),400
     
 
-    user = db.session.execute(select(User).where(
+    existing_user = db.session.execute(select(User).where(
         User.email== email)).scalar_one_or_none()
-    if user :
+    if existing_user :
         return jsonify ({"error": "user with this mail already exist"}),400
     
     new_user = User(email= email)
