@@ -10,13 +10,18 @@ export const login = async (user,navigate) => {
         "content-type": "application/json"
       }
     })
-  const data = await response.json();
+  
   if (!response.ok) {
     alert(data.error)
-    return
+    return;
   }
+  const data = await response.json();
+  
+
+
   localStorage.setItem("token",data.token)
   navigate("/private")
+  return data 
   
 }
 

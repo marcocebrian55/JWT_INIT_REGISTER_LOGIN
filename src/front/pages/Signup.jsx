@@ -43,7 +43,8 @@ export const Signup = () => {
                     placeholder="Enter your email"
                     className="form-control"
                     value={newUser.email}
-                    onChange={handleChange} />
+                    onChange={handleChange}
+                    required />
 
             </div>
             <div className="mb-3">
@@ -53,7 +54,8 @@ export const Signup = () => {
                     placeholder="Enter your password"
                     className="form-control"
                     value={newUser.password}
-                    onChange={handleChange} />
+                    onChange={handleChange} 
+                    required/>
 
             </div>
             <button type = "submit" className="btn btn-primary w-100" >Register</button>
